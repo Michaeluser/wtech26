@@ -5,3 +5,5 @@
 2. [HTML - účel, štruktúra a sémantika textu, obrázky a multimédiá, ďalší obsah](zdroje/02-WT-html.pdf)
 
 3. [CSS - úvod, syntax, vloženie štýlov, selektory, miera konkrétnosti selektora, dedenie, box model, základné vlastnosti](zdroje/03-WT-css-uvod-selektory-box.pdf)
+
+4. [CSS - štandardný tok, rozloženie stránky (float, css tabuľky, grid system), responzívny dizajn (vs. statický, tekutý, adaptívny)](zdroje/04-WT-css-responzivny-dizajn.pdf)
