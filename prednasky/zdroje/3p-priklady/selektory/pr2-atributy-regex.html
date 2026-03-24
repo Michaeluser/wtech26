@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selektory - atribúty - príklad 2</title>
+    <meta charset="UTF-8">
+    <style>
+        /* všetky elementy s atribútom attr, kde hodnota je presne val, alebo začína val- */
+        [lang|=sk] {
+            font-weight: bold;
+        }
+
+        /* všetky elementy s atribútom attr, ak hodnota začína val */
+        [data-quantity^="optional"] {
+            opacity: 0.5;
+        }
+
+        /* všetky elementy s atribútom attr, ak hodnota končí val */
+        [data-quantity$="kg"] {
+            font-weight: bold;
+        }
+
+        /* všetky elementy s atribútom attr, ak hodnota obsahuje reťazec val */
+        [data-vegetable*="nie pikantne"] {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+Ingrediencie na môj recept <i lang="sk-SK">Dusené bravčové plece na mrkve</i>
+<ul>
+    <li data-quantity="1kg" data-meat>Bravčové plece</li>
+    <li data-quantity="5ks" data-vegetable>Cesnak</li>
+    <li data-quantity="1pl" data-vegetable="určite nie pikantne korenie">Korenie (červené)</li>
+    <li data-quantity="1kl" data-vegetable>Koriander</li>
+    <li data-quantity="200g" data-vegetable>Mrkva</li>
+    <li data-quantity="optional 10ml" data-vegetable="liquid">Olive oil</li>
+</ul>
+</body>
+</html>

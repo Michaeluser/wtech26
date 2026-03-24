@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selektory - pseudo elementy - príklad 4</title>
+    <meta charset="UTF-8">
+    <style>
+        /* zakladne styly tabulky */
+        table {
+            font: 1em sans-serif;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        /*
+            aplikuj na vsetky td, ktore su vnorene v table,
+            aplikuj tiez na vsetky th, ktore su vnorene v table
+        */
+        table td, table th {
+            border : 1px solid black;
+            padding: 0.5em 0.5em 0.4em;
+        }
+
+        /*
+            aplikuj na vsetky th, ktore su vnorene v thead, a thead je vnorene v table
+        */
+        table thead th {
+            color: white;
+            background: black;
+        }
+
+        /*
+            každý element zodpovedajúci selektoru B, ktorý je ďalším súrodencom elementu, ktorému zodpovedá selektor A (teda ďalšie dieťa s rovnakým rodičom)
+           aplikuj na kazde td, ktoremu predchadza td a sucasne jeho predkom je tbody, a predkom tbody je table
+           tzn. bunky v druhom a tretom stlpci tabulky budu vycentrovane
+        */
+        table tbody td + td {
+            text-align: center;
+        }
+
+        /*
+            pseudo trieda last-child
+            aplikuj na kazdy element td, ktory je poslednym potomkom v elemente tbody, a tbody je potomkom elementu table,
+            tzn. bunky v tretom stlpci nebudu vycentrovane, ale text bude zarovnany vpravo, teda tento selektor prepisuje styl pre treti stlpec
+        */
+        table tbody td:last-child {
+            text-align: right;
+        }
+
+        /*
+            aplikuj na kazdy th element, ktory je vnoreny v elemente tfoot (tfoot element je jeho predkom), a tfoot element je vnoreny v elemente table */
+        table tfoot th {
+            text-align: right;
+            border-top-width: 5px;
+            border-left: none;
+            border-bottom: none;
+        }
+
+        /*
+            každý element zodpovedajúci selektoru B, ktorý je ďalším súrodencom elementu, ktorému zodpovedá selektor A (teda ďalšie dieťa s rovnakým rodičom)
+            aplikuj na kazde td, ktoremu predchadza th a sucasne jeho predkom je table
+            tzn. bunka s cislom 149,65
+        */
+        table th + td {
+            text-align: right;
+            border-top-width: 5px;
+            color: white;
+            background: black;
+        }
+
+        /*
+            aplikuj na vsetky pseudo elementy "za" td, ktore su poslednym potomkom v elementoch, ktorych trieda je "with-currency" a maju atribut "lang" s hodnotou "sk-SK"
+        */
+        .with-currency[lang="sk-SK"] td:last-child::after {
+            content: ' €';
+        }
+
+        .with-currency[lang="en-US"] td:last-child::before {
+            content: '$';
+        }
+
+    </style>
+</head>
+<body>
+    <table lang="sk-SK" class="with-currency">
+        <thead>
+            <tr>
+                <th>Produkt</th>
+                <th>Množstvo</th>
+                <th>Cena</th>
+            </tr>
+            </thead>
+        <tfoot>
+            <tr>
+                <th colspan="2">Celkovo:</th>
+                <td>149,65</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>Stolička</td>
+                <td>1</td>
+                <td>137,00</td>
+            </tr>
+            <tr>
+                <td>Ryža</td>
+                <td>2</td>
+                <td>2,20</td>
+            </tr>
+            <tr>
+                <td>Kniha</td>
+                <td>1</td>
+                <td>10,45</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Positioning</title>
+    <meta charset="UTF-8">
+	<style>
+		body {
+		  width: 500px;
+		  margin: 0 auto;
+		}
+
+		p {
+		  background: #ddd;
+		  border: 3px solid blue;
+		  padding: 10px;
+		  margin: 10px;
+		}
+
+		span {
+		  background: rgba(0,0,255,0.5);
+		  border: 1px solid black;
+		}
+		
+		span.inline-block {
+			background: rgba(255,0,0,0.5);
+			display: inline-block;
+		}
+
+		.relative {
+			position: relative;
+		}
+		
+		.absolute {
+			position: absolute;
+			top: 100px;	
+			left: 300px
+		}
+		
+	</style>
+</head>
+<body>
+<h1>Základný tok dokumentu</h1>
+
+<p>Som základný plnohodnotný blokový element (display:block). Ďalšie plnohodnotné bloky sú umiestnené podo mnou.</p>
+
+<div class="relative">
+	<p class="absolute">Štandardne máme šírku 100% nášho rodičovského elementu. Šírka/výška závisí od celkovej šírky/výšky nášho obsahu. Naša celková šírka je obsah (content) + vnútorný okraj (padding) + rámik (border).</p>
+</div>
+
+<p>Medzerou medzi nami je vonkajší rámik (margin). Kvôli margin collapsing, je veľkosť medzery medzi dvomi blokmi veľkosť vonkajšieho rámika toho bloku, ktorý ho má väčší.</p>
+
+<p>Riadkové bloky (display: inline) <span>tento</span> a <span>tento</span> sú na rovnakom riadku ako okolitý text, ak je priestor na rovnakom riadku. Obsah, <span>ktorý preteká je na novom riadku ("ktorý" sa ešte zmestil).</span> <span class="inline-block">Hybridné bloky (display:inline-block), akým je aj tento, sú na rovnakom riadku, ak majú ešte dosť priestoru.</span> Ak nemajú, sú na novom riadku, ako aj ilustruje predošlý hybridný blok.
+
+<img src="elephant_baby_1-400.jpg">
+Obrázok je hybridný blok, ak má dosť miesta, je na rovnakom riadku. Ak nemá dosť miesta, je na novom riadku. <span class="inline-block">Tento hybrid má priestor.</span>
+</p>
+<p>
+ <span class="inline-block">Za hybridným blokom (som hybrid X1), ktorý preteká do ďalšieho riadku, ako ilustruje náš príklad, nemôže nasledovať okolitý text, ani ďalší riadkový alebo hybridný blok.</span> 
+ <span class="inline-block">Hybrid X2.</span>
+ <span class="inline-block">Som hybrid X3 ... X2 by sa zmestil za X1, ale X1 preteká.</span>
+ Hybridy X2 a X3 sa zmestili za sebou v jednom riadku, ani jeden nepreteká.
+</p>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selektory - atribúty - príklad 1</title>
+    <meta charset="UTF-8">
+    <style>
+        #winning {
+            background-color: red;
+            border: 5px solid black;
+        }
+
+        .better {
+            background-color: gray;
+            /*
+                selektor na identifikator - #winning ma vyssiu mieru konkretnosti ako selektor na triedu, preto sa aplikuje border: 5px solid black,
+                ak ale odkomentujeme deklaraciu !important, border zmizne, important plati nad vsetko, moze ho "prebit" iba iny important, ktory bude deklarovany neskor
+            */
+            border: none /* !important; */
+        }
+
+        p {
+            background-color: blue;
+            color: white;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<p class="better">Slon africký (Loxodonta africana) je najväčší z 3 druhov slonov (niekedy sa nazýva aj savanový slon).</p>
+<p class="better" id="winning">Slon indický (Elephas maximus) je jiho- a jihovýchodoasijský slon dlouhý 3,5 metrů, jeden ze tří žijících druhů slona a jediný nevymřelý druh z rodu Elephas.</p>
+</body>
+</html>

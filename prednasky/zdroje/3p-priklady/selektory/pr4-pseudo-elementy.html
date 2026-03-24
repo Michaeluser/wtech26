@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selektory - pseudo elementy - príklad 4</title>
+    <meta charset="UTF-8">
+    <style>
+        /*vsetkym elementom, ktore maju atribut href, a ktorych hodnota zacina na http pridaj sipku na koniec ich aktualneho obsahu  (indikujucu, ze sa odkaz otvori v novom okne/tabe)*/
+        [href^=http]::after {
+            content: '⤴';
+        }
+    </style>
+</head>
+<body>
+<a href="https://www.fiit.stuba.sk/" target="_blank">FIIT STU</a>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selektory - pseudo triedy - príklad 3</title>
+    <meta charset="UTF-8">
+    <style>
+        /* plati na element a (odkaz) vo vsetkych stavoch */
+        a {
+            color: blue;
+            font-weight: bold;
+        }
+
+        /* plati na element a (odkaz), ktory bol navstiveny */
+        a:visited {
+            color: blue;
+        }
+
+        /* a:hover - plati na element a, pri prechode kurzorom mysi ponad element
+           a:active, a:focus - plati na element a, pri aktivovani - oznaceni, napr. prostrednictvom klavesnice, pouzitim [TAB] */
+        a:hover,
+        a:active,
+        a:focus {
+            color: darkred;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.fiit.stuba.sk/" target="_blank">FIIT STU</a>
+</body>
+</html>
