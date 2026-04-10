@@ -7,3 +7,8 @@
 3. [CSS - úvod, syntax, vloženie štýlov, selektory, miera konkrétnosti selektora, dedenie, box model, základné vlastnosti](zdroje/03-WT-css-uvod-selektory-box.pdf)
 
 4. [CSS - štandardný tok, rozloženie stránky (float, css tabuľky, grid system), responzívny dizajn (vs. statický, tekutý, adaptívny)](zdroje/04-WT-css-responzivny-dizajn.pdf)
+
+5. [Zostavenie na strane servera - SSR architektúra, REST, Laravel MVC úvod, prvá aplikácia](zdroje/05-WT-web-ssr-rest-laravel-uvod.pdf)
+   - [PHP rýchlokurz](PHP-rychlokurz/)
+
+6. [Laravel - základné koncepty architektúry, Blade, ORM (Eloquent), vzťahy medzi modelmi](zdroje/06-WT-laravel-koncepty-architetury-blade-orm-vztahy.pdf)
